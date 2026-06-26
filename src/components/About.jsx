@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaDownload, FaFileDownload } from "react-icons/fa";
 
 const About = () => {
   const texts = [
@@ -40,12 +41,12 @@ const About = () => {
       <div className="h-full flex flex-col items-center ">
         {/* Heading */}
         <div className="text-center mb-4 pt-5 w-full h-fit flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold font-['Space_Grotesk'] italic text-gray-800 mb-2">
             About me
           </h2>
           <div className="flex items-center justify-center gap-2">
             <span className="h-0.5 w-10 bg-gray-500"></span>
-            <span className="text-gray-600 text-lg md:text-xl italic">
+            <span className="text-gray-600 text-lg md:text-xl font-['Space_Grotesk'] italic">
               who I am
             </span>
             <span className="h-0.5 w-10 bg-gray-500"></span>
@@ -68,36 +69,85 @@ const About = () => {
           {/* Text */}
           <div className="w-full md:w-[55%] p-4 md:p-6 flex items-center">
             <div className="w-full pt-2 md:pt-5 lg:pr-25">
-              <h2 className="font-['Outfit'] text-2xl text-[#12DAA8] pb-2 md:text-xl">
-                <span className="text-black">I am Neeraj Gupta and I'm a</span>
-                {text}
-                <span className="animate-pulse">|</span>
-              </h2>
-              <p className="text-justify leading-7 text-sm sm:text-base font-medium">
+              <div className="h-20 ">
+                <h2
+                  className="
+                 font-['Space_Grotesk']
+                 text-xl
+                 sm:text-2xl
+                 md:text-3xl
+                 font-semibold
+                 text-gray-900
+                 pb-4
+                  "
+                >
+                  I am Neeraj Gupta and I'm
+                  <span className="text-[#12DAA8]"> {text}</span>
+                  <span className="text-[#12DAA8] animate-pulse">|</span>
+                </h2>
+              </div>
+
+              <p
+                className="
+      font-['Space_Grotesk'] italic
+      text-sm
+      sm:text-base
+      md:text-lg
+      leading-7
+      md:leading-8
+      text-gray-600
+      text-justify
+      "
+              >
                 Hello! I'm Neeraj Gupta, a passionate Full Stack Developer
                 specializing in building modern and scalable web applications
                 using .NET (ASP.NET Core Web API) and React. I enjoy creating
                 clean, efficient, and user-friendly applications that solve
-                real-world problems. <br /> I focus on developing strong and
-                maintainable backend APIs with .NET while building responsive
-                and interactive user interfaces using React. My goal is to
-                deliver smooth performance and great user experience in every
-                project I work on. <br /> Apart from development, I continuously
-                learn new technologies and improve my problem-solving skills. I
-                always try to follow best practices in software development and
-                write clean, scalable code. <br /> I'm also interested in
-                collaborating on innovative projects where I can contribute,
-                learn, and grow as a developer while building impactful
-                real-world solutions.
+                real-world problems.
+                <br />
+                <br />
+                I focus on developing strong and maintainable backend APIs with
+                .NET while building responsive and interactive user interfaces
+                using React. My goal is to deliver smooth performance and great
+                user experience in every project I work on.
+                <br />
+                <br />
+                Apart from development, I continuously learn new technologies
+                and improve my problem-solving skills. I always try to follow
+                best practices in software development and write clean, scalable
+                code.
+                <br />
+                <br />
+                I'm also interested in collaborating on innovative projects
+                where I can contribute, learn, and grow as a developer while
+                building impactful real-world solutions.
               </p>
-
-              <a
-                href="/resume.pdf"
-                download="Neeraj_Gupta_Resume.pdf"
-                className="bg-[#12DAA8] border-2 border-[#12DAA8] text-white hover:bg-transparent hover:border-[#12DAA8] hover:text-[#12DAA8] font-semibold py-2 md:py-3 px-6 md:px-8 rounded-lg text-base md:text-xl tracking-wide transition-colors duration-200 mt-5 md:mt-7 inline-block"
-              >
-                Download Resume
-              </a>
+              <div className="pt-5">
+                <a
+                  href="/resume.pdf"
+                  download="Neeraj_Gupta_Resume.pdf"
+                  rel="noopener noreferrer"
+                  className="
+                 flex items-center gap-2
+                 px-6 py-3
+                 rounded-full
+                 border
+                 border-gray-600
+                 bg-gray-600
+                 text-white
+                 font-medium
+                 transition-all
+                 duration-300
+                 hover:border-[#12DAA8]
+                 hover:text-[#12DAA8]
+                 hover:bg-[#181818]
+                 hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+                 w-53
+      "
+                >
+                  <FaFileDownload /> Download Resume
+                </a>
+              </div>
             </div>
           </div>
         </div>

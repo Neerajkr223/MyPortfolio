@@ -36,20 +36,7 @@ const Projects = () => {
       github: "https://github.com/Neerajkr223/FoodWebApi.git",
       live: "",
     },
-    {
-      icon: <FaBook className="text-gray-300" />,
-      name: "Advanced Todo List App",
-      desc: "Modern task management application built with React. Includes responsive UI, task creation, task details, sidebar navigation, search, categories, and smooth user interactions.",
-      github: "https://github.com/Neerajkr223/TodoList.git",
-      live: "https://todo-list-flame-chi-73.vercel.app/",
-    },
-    {
-      icon: <FaLock className="text-violet-500" />,
-      name: "Password Generator",
-      desc: "A secure and user-friendly password generator built with React. Generates strong random passwords with customizable options.",
-      github: "https://github.com/Neerajkr223/password-gen.git",
-      live: "https://password-gen-zeta-pied.vercel.app/",
-    },
+
     {
       icon: (
         <div className="flex gap-1">
@@ -76,12 +63,14 @@ const Projects = () => {
     >
       <div className="flex flex-col items-center">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-medium mb-2">Projects</h2>
+          <h2 className="text-4xl font-['Space_Grotesk'] mb-2">Projects</h2>
 
           <div className="flex items-center justify-center gap-2">
             <span className="h-0.5 w-10 bg-gray-500"></span>
 
-            <span className="text-white text-xl italic">my work</span>
+            <span className="text-white text-xl italic font-['Space_Grotesk']">
+              my work
+            </span>
 
             <span className="h-0.5 w-10 bg-gray-500"></span>
           </div>
@@ -108,23 +97,35 @@ const Projects = () => {
               >
                 <div className="text-4xl">{project.icon}</div>
 
-                <h3 className="text-2xl font-medium">{project.name}</h3>
+                <h3 className="text-2xl font-bold font-['Space_Grotesk'] ">
+                  {project.name}
+                </h3>
 
-                <p className="text-base leading-relaxed font-medium">
+                <p className="text-base leading-relaxed font-medium font-['Space_Grotesk'] italic">
                   {project.desc}
                 </p>
-
-                <div className="flex gap-6 mt-3 flex-wrap justify-center">
+                <div className="flex gap-6 mt-5 flex-wrap justify-center">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-            px-6 py-3
-            rounded-full
-            border-2
-            border-white"
+      flex items-center gap-2
+      px-6 py-3
+      rounded-full
+      border
+      border-gray-600
+      bg-[#111]
+      text-white
+      font-medium
+      transition-all
+      duration-300
+      hover:border-[#12DAA8]
+      hover:text-[#12DAA8]
+      hover:bg-[#181818]
+      hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+      "
                     >
                       GitHub
                     </a>
@@ -136,14 +137,19 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-            px-6 py-3
-            rounded-full 
-            bg-white hover:bg-gray-300
-            text-black flex items-center gap-2"
+                      flex items-center gap-2
+                      px-6 py-3
+                      rounded-full
+                      bg-blue-500
+                      hover:text-white 
+
+                      text-black
+                      font-semibold
+                      transition-all
+                      duration-300
+                      hover:shadow-[0_0_20px_rgba(18,218,168,0.35)]"
                     >
-                      <span>
-                        <LuSquareArrowOutUpRight />
-                      </span>
+                      <LuSquareArrowOutUpRight className="text-lg" />
                       Live Demo
                     </a>
                   )}

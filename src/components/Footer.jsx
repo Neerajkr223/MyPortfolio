@@ -31,12 +31,12 @@ justify-center
 px-4
 text-center
 text-gray-100
-font-mono
-text-sm md:text-base lg:text-xl"
+font-['Space_Grotesk']
+text-sm md:text-base lg:text-xl italic"
       >
         <h2>
           &copy; 2026
-          <span>Neeraj Gupta</span>. All rights reserved.
+          <span> Neeraj Gupta</span>. All rights reserved.
         </h2>
       </div>
     </div>

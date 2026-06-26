@@ -33,13 +33,13 @@ function Navbar() {
         } flex justify-between items-center px-4 sm:px-6 md:pl-14 lg:pl-28 fixed w-full z-50`}
       >
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center font-['Space_Grotesk'] italic">
           <span
-            className={`${scrolled ? "text-black" : "text-[#12DAA8]"} font-bold text-xl md:text-2xl tracking-tight`}
+            className={`${scrolled ? "text-black" : "text-[#12DAA8]"} font-bold  text-xl md:text-2xl tracking-tight`}
           >
             N
           </span>
-          <span className="text-white font-bold text-xl md:text-2xl">/</span>
+          <span className="text-white font-bold text-xl md:text-2xl">|</span>
           <span className="text-white font-bold text-xl md:text-2xl tracking-tight">
             G
           </span>
@@ -47,7 +47,7 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <div
-          className={`hidden md:flex md:text-base lg:text-xl items-center md:gap-10 lg:gap-14 justify-center w-[60%] font-medium ${
+          className={`hidden md:flex md:text-base lg:text-xl items-center md:gap-10 lg:gap-14 justify-center w-[60%] font-['Space_Grotesk'] italic font-bold ${
             scrolled ? "text-black" : "text-white"
           }`}
         >
@@ -82,12 +82,12 @@ function Navbar() {
 
       {/* Mobile Menu - Top se aata hai */}
       <div
-        className={`fixed top-0 left-0 right-0 bg-[#12DAA8] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 left-0 right-0 bg-[#12DAA8] z-50 transform transition-transform duration-300 ease-in-out  md:hidden ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         {/* Logo + X Button */}
-        <div className="flex items-center justify-between px-4 sm:px-6 h-14">
+        <div className="flex items-center justify-between px-4 sm:px-6 h-14 font-['Space_Grotesk'] italic">
           <div className="flex items-center">
             <span className="text-black font-bold text-xl tracking-tight">
               N
@@ -107,7 +107,7 @@ function Navbar() {
         </div>
 
         {/* Links */}
-        <ul className="flex flex-col px-4 sm:px-6 pb-6 gap-1">
+        <ul className="flex flex-col px-4 sm:px-6 pb-6 gap-1  font-['Space_Grotesk'] italic font-bold ">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a

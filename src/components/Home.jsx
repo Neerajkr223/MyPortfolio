@@ -47,7 +47,7 @@ function Home() {
       className="min-h-screen text-white pt-10"
     >
       <div className="flex flex-col pt-10  px-6 md:pl-28 gap-8 items-start mt-20 ">
-        <h2 className="font-['Outfit'] text-3xl text-gray-300">
+        <h2 className="font-['Space_Grotesk'] italic text-3xl text-gray-300">
           Hello, my name is
         </h2>
 
@@ -57,11 +57,8 @@ function Home() {
           <span className="text-[#12DAA8]">PTA</span>
         </h1>
 
-        <h2 className="font-['Outfit'] text-2xl md:text-4xl text-[#12DAA8]">
-          <span className="text-white">And I'm a</span>
-
-          {text}
-
+        <h2 className="font-['Outfit'] text-lg md:text-4xl sm:text-base text-[#12DAA8]">
+          <span className="text-white">And I'm a </span> {text}
           <span className="animate-pulse">|</span>
         </h2>
 

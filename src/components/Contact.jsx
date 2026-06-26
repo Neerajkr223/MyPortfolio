@@ -83,12 +83,16 @@ const Contact = () => {
     <section id="contact" className="min-h-screen text-black bg-white">
       <div className="w-full flex justify-center pt-6">
         <div className="text-center mb-3">
-          <h2 className="text-4xl font-medium text-gray-800 mb-2">Contact</h2>
+          <h2 className="text-4xl font-['Space_Grotesk'] font-bold text-gray-800 mb-2">
+            Contact
+          </h2>
 
           <div className="flex items-center justify-center gap-2">
             <span className="h-0.5 w-10 bg-gray-500"></span>
 
-            <span className="text-gray-600 text-xl italic">get in touch</span>
+            <span className="text-gray-600 font-['Space_Grotesk'] text-xl italic">
+              get in touch
+            </span>
 
             <span className="h-0.5 w-10 bg-gray-500"></span>
           </div>
@@ -100,11 +104,21 @@ const Contact = () => {
           {/* LEFT SIDE */}
 
           <div className="flex-1">
-            <h2 className="text-2xl font-medium text-gray-800 mb-4">
+            <h2 className="font-['Space_Grotesk'] text-3xl font-semibold text-gray-900 mb-4">
               Let's Connect!
             </h2>
 
-            <p className="text-xl leading-relaxed mb-8 text-justify">
+            <p
+              className="
+  font-['Outfit']
+  text-lg
+  md:text-xl
+  leading-relaxed
+  mb-8
+  text-gray-600
+  text-justify
+  "
+            >
               I'm a Full Stack Developer specializing in React.js and .NET,
               focused on creating modern, scalable, and high-performance web
               applications. I enjoy building clean user interfaces with React
@@ -119,9 +133,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase">Name</p>
+                  <p className="text-base text-black font-bold uppercase font-['Space_Grotesk'] ">
+                    Name
+                  </p>
 
-                  <p className="text-gray-400 font-semibold">NEERAJ GUPTA</p>
+                  <p className="text-gray-500 font-semibold">NEERAJ GUPTA</p>
                 </div>
               </div>
 
@@ -131,9 +147,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase">Phone</p>
+                  <p className="text-base text-black font-bold uppercase font-['Space_Grotesk']">
+                    Phone
+                  </p>
 
-                  <p className="text-gray-400 font-semibold">+91 7007812166</p>
+                  <p className="text-gray-500 font-semibold">+91 7007812166</p>
                 </div>
               </div>
 
@@ -143,16 +161,18 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase">Email</p>
+                  <p className="text-base text-black font-bold uppercase font-['Space_Grotesk']">
+                    Email
+                  </p>
 
-                  <p className="text-gray-400 font-semibold">
+                  <p className="text-gray-500 font-semibold">
                     neerajkrg23@gmail.com
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex gap-10">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-3">
               {socialLinks.map(({ Icon, label, href }, i) => (
                 <a
                   key={i}
@@ -160,27 +180,42 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                  group
-                  flex
-                  items-center
-                  gap-2
-                 hover:text-white hover:bg-black 
-                  text-black
-                  rounded-full
-                  px-3
-                  py-3
-                  overflow-hidden
-                  transition-all
-                  duration-300
-                  w-14
-                  hover:w-32
-                  shadow-[0_0_15px_5px_rgba(0,0,0,0.08)]"
+      group
+      flex
+      items-center
+      gap-2
+      px-4 sm:px-6
+      py-2.5 sm:py-3
+      rounded-full
+      border
+      border-gray-700
+      bg-gray-600
+      text-white
+
+      transition-all
+      duration-300
+      hover:border-[#12DAA8]
+      hover:bg-[#222]
+      hover:shadow-[0_0_20px_rgba(18,218,168,0.25)]
+      "
                 >
-                  <div className="w-8 h-8 rounded-full bg-[#12DAA8] flex items-center justify-center shrink-0">
-                    <Icon />
+                  <div
+                    className="
+        flex
+        items-center
+        justify-center
+        w-8 h-8 sm:w-10 sm:h-10
+        rounded-full
+        bg-[#12DAA8]/10
+        text-[#12DAA8]
+        border
+        border-[#12DAA8]/20
+      "
+                  >
+                    <Icon className="text-lg sm:text-xl" />
                   </div>
 
-                  <span className="opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+                  <span className="text-sm sm:text-base font-medium font-['Space_Grotesk'] group-hover:text-[#12DAA8]">
                     {label}
                   </span>
                 </a>
@@ -191,8 +226,9 @@ const Contact = () => {
           {/* RIGHT SIDE */}
 
           <div className="flex-1 mt-10">
-            <h2 className="text-2xl font-bold mb-6">Message me</h2>
-
+            <h2 className="font-['Space_Grotesk'] text-3xl font-semibold text-gray-900 mb-4">
+              Message me
+            </h2>
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col md:flex-row gap-3 mb-3">
                 <input
@@ -239,20 +275,24 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
+                rel="noopener noreferrer"
                 className="
-                flex
-                items-center
-                gap-2
-                bg-[#12DAA8]
-                px-6
-                py-3
-                rounded-lg
-                font-medium
-                hover:bg-transparent
-                hover:text-[#12DAA8]
-                border-2
-                border-[#12DAA8]
-                transition"
+                   flex items-center gap-2
+                   px-6 py-3
+                   rounded-full
+                   border
+                   border-gray-600
+                   bg-gray-600
+                   text-white
+                   font-medium
+                   transition-all
+                   duration-300
+                   hover:border-[#12DAA8]
+                   hover:text-[#12DAA8]
+                   hover:bg-[#181818]
+                   hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+                   font-['Space_Grotesk']
+                   "
               >
                 <FaPaperPlane />
 
