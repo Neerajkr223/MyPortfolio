@@ -14,19 +14,6 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const socialLinks = [
-    {
-      Icon: FaLinkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/neeraj-gupta-123437348/",
-    },
-    {
-      Icon: FaGithub,
-      label: "GitHub",
-      href: "https://github.com/neerajkr223",
-    },
-  ];
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -110,14 +97,14 @@ const Contact = () => {
 
             <p
               className="
-  font-['Outfit']
-  text-lg
-  md:text-xl
-  leading-relaxed
-  mb-8
-  text-gray-600
-  text-justify
-  "
+             font-['Outfit']
+             text-lg
+             md:text-xl
+             leading-relaxed
+             mb-8
+             text-gray-600
+             text-justify
+             "
             >
               I'm a Full Stack Developer specializing in React.js and .NET,
               focused on creating modern, scalable, and high-performance web
@@ -128,8 +115,8 @@ const Contact = () => {
 
             <div className="space-y-5 mb-8">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-500 flex items-center justify-center">
-                  <FaUser className="text-[#12DAA8]" />
+                <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <FaUser className="text-white" />
                 </div>
 
                 <div>
@@ -142,8 +129,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-500 flex items-center justify-center">
-                  <FaMapPin className="text-[#12DAA8]" />
+                <div className="w-10 h-10 rounded-full  bg-gray-600 flex items-center justify-center">
+                  <FaMapPin className="text-white" />
                 </div>
 
                 <div>
@@ -156,8 +143,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-500 flex items-center justify-center">
-                  <FaEnvelope className="text-[#12DAA8]" />
+                <div className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <FaEnvelope className="text-white" />
                 </div>
 
                 <div>
@@ -172,54 +159,55 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-              {socialLinks.map(({ Icon, label, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-      group
-      flex
-      items-center
-      gap-2
-      px-4 sm:px-6
-      py-2.5 sm:py-3
-      rounded-full
-      border
-      border-gray-700
-      bg-gray-600
-      text-white
-
-      transition-all
-      duration-300
-      hover:border-[#12DAA8]
-      hover:bg-[#222]
-      hover:shadow-[0_0_20px_rgba(18,218,168,0.25)]
-      "
-                >
-                  <div
-                    className="
-        flex
-        items-center
-        justify-center
-        w-8 h-8 sm:w-10 sm:h-10
-        rounded-full
-        bg-[#12DAA8]/10
-        text-[#12DAA8]
-        border
-        border-[#12DAA8]/20
-      "
-                  >
-                    <Icon className="text-lg sm:text-xl" />
-                  </div>
-
-                  <span className="text-sm sm:text-base font-medium font-['Space_Grotesk'] group-hover:text-[#12DAA8]">
-                    {label}
-                  </span>
-                </a>
-              ))}
+            <div className="flex gap-3 flex-wrap">
+              <a
+                href="https://github.com/neerajkr223"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                         flex items-center gap-2
+                         px-6 py-3
+                         rounded-full
+                         border
+                         border-gray-600
+                         bg-gray-600
+                         text-white
+                         font-medium
+                         transition-all
+                         duration-300
+                         hover:border-[#12DAA8]
+                         hover:text-[#12DAA8]
+                         hover:bg-[#181818]
+                         hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+                         font-['Space_Grotesk']
+                  "
+              >
+                <FaGithub /> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/neeraj-gupta-dotnet/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                         flex items-center gap-2
+                         px-6 py-3
+                         rounded-full
+                         border
+                         border-gray-600
+                         bg-gray-600
+                         text-white
+                         font-medium
+                         transition-all
+                         duration-300
+                         hover:border-[#12DAA8]
+                         hover:text-[#12DAA8]
+                         hover:bg-[#181818]
+                         hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+                         font-['Space_Grotesk']
+                  "
+              >
+                <FaLinkedin /> LinkedIn
+              </a>
             </div>
           </div>
 

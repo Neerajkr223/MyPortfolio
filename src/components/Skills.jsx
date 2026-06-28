@@ -169,27 +169,27 @@ const Skills = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-      flex items-center gap-2
-      px-6 py-3
-      rounded-full
-      border
-      border-gray-600
-      bg-gray-600
-      text-white
-      font-medium
-      transition-all
-      duration-300
-      hover:border-[#12DAA8]
-      hover:text-[#12DAA8]
-      hover:bg-[#181818]
-      hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
-      font-['Space_Grotesk']
+             flex items-center gap-2
+             px-6 py-3
+             rounded-full
+             border
+             border-gray-600
+             bg-gray-600
+             text-white
+             font-medium
+             transition-all
+             duration-300
+             hover:border-[#12DAA8]
+             hover:text-[#12DAA8]
+             hover:bg-[#181818]
+             hover:shadow-[0_0_18px_rgba(18,218,168,0.20)]
+             font-['Space_Grotesk']
       "
             >
               <FaGithub /> GitHub
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/neeraj-gupta-dotnet/"
               target="_blank"
               rel="noopener noreferrer"
               className="
